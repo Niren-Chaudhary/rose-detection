@@ -22,7 +22,7 @@ class ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       String confirmPassword) async {
     try {
       final response = await http.post(
-        Uri.parse('http://127.0.0.1:8000/api/password-reset/'),
+        Uri.parse('http://192.168.1.95sx:8000/api/password-reset/'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'email': email,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:roseproject/features/camera/camera_screen.dart';
+//import 'package:roseproject/features/camera/camera_screen.dart';
 import 'package:roseproject/forgetpassword.dart';
 import 'package:roseproject/generate_otp.dart';
 import 'package:roseproject/home.dart';
@@ -18,7 +18,7 @@ void main() {
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignUpPage(),
         '/service': (context) => const ServicePage(),
-        '/camera': (context) => const CameraScreen(),
+        // '/camera': (context) => const CameraScreen(),
         '/reset': (context) => const ForgotPasswordScreen(),
         '/generateOtp': (context) => const GenerateOtp(),
       },

@@ -17,7 +17,7 @@ class GenerateOtpState extends State<GenerateOtp> {
   Future<void> requestOtp(String email) async {
     try {
       final response = await http.post(
-        Uri.parse('http://127.0.0.1:8000/api/send-otp/'),
+        Uri.parse('http://192.168.1.95:8000/api/send-otp/'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({'email': email}),
       );

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CustomUser
+from .models import CustomUser, UploadedImage
 from mongoengine.errors import ValidationError, NotUniqueError
 
 # Signup Serializer for MongoEngine
@@ -62,3 +62,9 @@ class LoginSerializer(serializers.Serializer):
         return {
             'user': user  # Return the validated user
         }
+
+# Image Upload Serializer for Django ORM model
+class ImageUploadSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UploadedImage
+        fields = ['image']

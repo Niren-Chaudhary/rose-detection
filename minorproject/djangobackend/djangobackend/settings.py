@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-k%fq=4k29a_6i@x0w2i-95oq%%q60h3@i2!8%u5zun@e&@snh^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.95','localhost']
 
 # Application definition
 INSTALLED_APPS = [
@@ -114,9 +114,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
 
-# Media files (User-uploaded content)
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'  # URL path to access media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Actual filesystem path for storing media
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -126,8 +125,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 # If you want to specify only the Flutter web app origin
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:8000",  # Django server
-    "http://127.0.0.1:59394",  # Flutter app in DevTools
+    "http://192.168.1.95:8000",  # Django server
+    "http://127.0.0.1:59394", # Flutter app in DevTools
+     "http://localhost:8000", 
 ]
 
 # Allow specific HTTP methods and headers if needed
